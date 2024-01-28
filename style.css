@@ -305,7 +305,7 @@ img{
     position: absolute;
 }
 .name-text{
-    width: 131px;
+    width: 450px;
     height: 21px;
     color: #FFF;
     font-family: Roboto, sans-serif;
@@ -315,6 +315,11 @@ img{
     line-height: normal;
     position: absolute;
     margin: 0 857px 432px 0;
+}
+input{
+    background: none;
+    border: none;
+    outline: none;
 }
 .band-name{
     position: absolute;
@@ -332,7 +337,7 @@ img{
 }
 .email-text{
     position: absolute;
-    width: 94px;
+    width: 450px;
     height: 21px;
     color: #FFF;
     font-family: Roboto, sans-serif;
