@@ -8,6 +8,7 @@ body{
     background-color: rgb(36, 84, 102);
 }
 .container {
+    display: flex-column;
     width: 1024px;
     height: 4987px;
     background: #FFF;
@@ -19,20 +20,29 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-.hero{
+.slideshow-container {
+    position: relative;
+}
+.hero {
     width: 1024px;
     height: 1000px;
     flex-shrink: 0;
 }
-.hero-img {
-    width: 1024px;
-    height: 1000px;
-    flex-shrink: 0;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-    position: absolute;
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.5s;
+    animation-name: fade;
+    animation-duration: 0.5s;
 }
-  
-  .header {
+@-webkit-keyframes fade{
+    from{opacity: .4;}
+    to{opacity: 1;}
+}
+@keyframes fade{
+    from{opacity: .4;}
+    to{opacity: 1;}
+}
+.header {
     width: 952px;
     height: 74px;
     flex-shrink: 0;
@@ -734,4 +744,32 @@ img{
     font-weight: 400;
     line-height: normal;
     margin: 13px 385px 13px 386px;
+}
+#prev-btn{
+    position: absolute;
+    margin: 400px 958px 0 36px;
+}
+#next-btn{
+    position: absolute;
+    margin: 400px 36px 0 936px;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn img{
+    width: 100%;
+    height: 100%;
+}
+.btn:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease-in-out;
 }

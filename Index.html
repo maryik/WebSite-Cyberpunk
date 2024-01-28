@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Archangelsk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="index.js" defer></script>
     <title>Cyberpunk</title>
 </head>
 <body>
     <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="img/hero.png" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/hero-img2.png" alt="">
+            </div>
+            <div class="mySlides fade">
+                <img src="img/hero-img3.png" alt="">
+            </div>
+        </div>
+        <a class="btn" id="prev-btn" onclick="plusSlides(-1)"><img src="img/prev-arrow.svg" alt=""></a>
+        <a class="btn" id="next-btn" onclick="plusSlides(1)"><img src="img/next-arrow.svg" alt=""></a>
         <div class="hero">
             <div class="yellow-signboard">
                 <img src="img/yellow-signboard.svg" alt="Жёлтая область">
@@ -18,7 +32,6 @@
                     <p class="more">Узнать больше</p>
                 </div>
             </div>
-            <img src="img/hero.png" alt="Задний фон" class="hero-img">
             <div class="contacts">
                 <img src="img/youtube logo.svg" alt="YouTube" class="icon">
                 <img src="img/vk logo.svg" alt="VK" class="icon1">
