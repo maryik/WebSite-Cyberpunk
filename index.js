@@ -21,11 +21,46 @@ function showSlides(n) {
 }
 
 const textName = document.querySelector(".name-text");
+const inputScrin = document.querySelector(".scrin-input");
 const textEmail = document.querySelector(".email-text");
+const scrinText = document.querySelector(".scrin-text");
 const btnSend = document.querySelector(".btn-send");
 
-btnSend.addEventListener("click", function() {
-    textEmail.value = "";
-    textName.value = "";
-    alert("Спасибо за участие!");
+function fullScrinForm(){
+    if(inputScrin.value !== ""){
+        scrinText.innerHTML = "Ваш скриншот: " + inputScrin.value
+    }
+    else{
+    }
+}
+inputScrin.addEventListener("change", fullScrinForm)
+function registrForm(){
+    if(textEmail.value === "" && textName.value === "" && inputScrin.value === ""){
+        alert("Вы не заполнили поля!")
+    }
+    else if(textEmail.value === ""){
+        alert("Заполните поле 'E-mail'")
+        textEmail.value = "";
+        textName.value = "";
+    }
+    else if(textName.value === ""){
+        alert("Заполните поле 'Имя'")
+        textEmail.value = "";
+        textName.value = "";
+    }
+    else if(inputScrin.value === ""){
+        alert("Вы не прикрпили скриншот!")
+        textEmail.value = "";
+        textName.value = "";
+    }
+    else{
+        textEmail.value = "";
+        textName.value = "";
+        inputScrin.value = "";
+        scrinText.innerHTML = "Прикрепите скриншот";
+        alert("Спасибо за участие!");
+    }
+}
+btnSend.addEventListener("click", () => {
+    registrForm();
 });
